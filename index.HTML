@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Background Image Example</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --overlay: rgba(10, 10, 15, 0.45);
+      --text: #ffffff;
+      --accent: #c7f36b;
+    }
+
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body{
+      height: 100%;
+    }
+
+    body{
+      font-family: "Space Grotesk", sans-serif;
+      color: var(--text);
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background:
+        linear-gradient(var(--overlay), var(--overlay)),
+        url("https://cdn-desktop-ai-media.oai.operacdn.com/public/generated_images/f5a3931a-c87b-11f1-8378-5f2febe3e377/blazer_with_school_logo_3765a9be.jpg") center/cover no-repeat;
+    }
+
+    .content{
+      text-align: center;
+      padding: 2rem;
+      animation: fadeUp 0.9s ease both;
+    }
+
+    h1{
+      font-size: clamp(2rem, 6vw, 4.5rem);
+      line-height: 0.95;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.04em;
+    }
+
+    p{
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      max-width: 42rem;
+      opacity: 0.9;
+    }
+
+    code{
+      color: var(--accent);
+      background: rgba(255,255,255,0.08);
+      padding: 0.2rem 0.45rem;
+      border-radius: 0.4rem;
+    }
+
+    @keyframes fadeUp{
+      from{
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to{
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="content">
+    <h1>MADE BY CHRISTOPHER MUTARII</h1>
+    <p>
+      Replace the image URL inside
+      <code>url("...")</code>
+      with your own online image link.
+    </p>
+  </main>
+</body>
+</html>
